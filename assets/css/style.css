@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #1A75E8;
+    --primary-color-hover:#368ffc;
     --second-color: #0F1137;
     --background-color: #F2F3F6;
     --background0-second-color: #FAFAFA;
@@ -19,6 +20,7 @@
 body {
     background-color: var(--background-color);
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1{
@@ -44,8 +46,113 @@ h4{
 p{
     font-size: 1rem;
     color: var(--text-black);
+    font-weight: 500;
+}
+ 
+a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 10%;
 }
 
 ul {
-    text-decoration: none;
+    list-style: none;
 }
+
+.container{
+    max-width: 1264px;
+    padding: 0px 32px;
+    margin: 0px auto;
+}
+
+.button {
+    background-color: var(--primary-color);
+    padding: 15px 35px;
+    border-radius: 10px;
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.button.button-transparent {
+    background-color: transparent;
+    color: var(--text-black);
+}
+
+/* HEADER */
+
+.header-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+
+.navbar-desktop .navbar--item a{
+   border-bottom: 3px solid transparent; 
+   transition: 0.3s;
+}
+
+.navbar-desktop .navbar .navbar--item a:hover{
+    border-bottom: 3px solid #1A75E8; 
+    color: var(--primary-color);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-desktop {
+        display: none;
+    }
+
+    .login-area {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .navbar-mobile.closed {
+        display: none;
+    }
+
+    .navbar-mobile.open {
+        display: block;
+    }
+
+    .navbar-mobile .navbar{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-transform: uppercase;
+        padding: 10px 0px;
+    }
+
+    .navbar-mobile .navbar .navbar--item:hover {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+}
+
+
