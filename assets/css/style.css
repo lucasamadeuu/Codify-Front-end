@@ -17,14 +17,17 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--background-color);
+html {
     font-size: 16px;
+}
+
+body {
+    background-color: var(--text-white);
     font-family: 'Poppins', sans-serif;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: var(--text-black);
 }
 
@@ -55,6 +58,10 @@ a {
     font-weight: 500;
 }
 
+span{
+    color: var(--primary-color);
+}
+
 nav ul {
     display: flex;
     gap: 10%;
@@ -64,9 +71,8 @@ ul {
     list-style: none;
 }
 
-.container{
+.container {
     max-width: 1264px;
-    padding: 0px 32px;
     margin: 0px auto;
 }
 
@@ -76,6 +82,7 @@ ul {
     border-radius: 10px;
     color: var(--text-white);
     transition: 0.3s;
+    width: 160px;
 }
 
 .button:hover {
@@ -88,6 +95,11 @@ ul {
 }
 
 /* HEADER */
+
+header {
+    background-color: var(--background-color);
+    padding: 0px 32px;
+}
 
 .header-area {
     display: flex;
@@ -115,8 +127,46 @@ ul {
     display: none;
 }
 
+/* SECTION BANNER */
+
+main {
+    background-color: var(--background-color);
+    padding: 0px 32px;
+}
+
+.banner-area {
+    display: flex;
+    padding: 10% 0px;
+}
+
+.banner-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+}
+
+.banner-image {
+    flex: 1;
+}
+
+.banner-image img{
+    width: 550px;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1100px) {
+    .banner-image img{
+        width: 450px;
+    }
+}
 
 @media (max-width: 768px) {
+
+    html {
+        font-size: 14px;
+    }
 
     .menu-icon {
         display: block;
@@ -153,6 +203,21 @@ ul {
         background-color: var(--primary-color);
         color: var(--background-color);
     }
+
+    .banner-area {
+        flex-direction: column;
+    }
+
+    .banner-image img{
+        display: none;
+    }
 }
+
+@media (max-width: 425px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 
 
