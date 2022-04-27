@@ -5,10 +5,11 @@
     --primary-color-hover:#368ffc;
     --second-color: #0F1137;
     --background-color: #F2F3F6;
-    --background0-second-color: #FAFAFA;
+    --background-second-color: #FAFAFA;
     --text-color: #686868;
     --text-white: #FFF;
     --text-black: #000;
+    --subtitle-color: #686868;
 }
 
 * {
@@ -46,6 +47,10 @@ h4{
     color: var(--text-black);
 }
 
+h5 {
+    font-size: 1.2rem;
+    color: var(--text-black);
+}
 p{
     font-size: 1rem;
     color: var(--text-black);
@@ -161,7 +166,7 @@ header {
 /* SECTION BRANDS */
 
 #brands {
-    padding: 10% 32px;
+    padding: 10% 32px 0% 32px;
 }
 
 .brands-area {
@@ -177,6 +182,50 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+/* SECTION SERVICES */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 32px 10% 32px;
+}
+
+.title-area {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--subtitle-color);
+    margin-top: 10px;
+}
+
+.services-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    height: 350px;
+    border-radius: 20px;
+    width: 400px;
+    background-color: var(--background-second-color);
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0px 13px 50px -32px rgba(0, 0, 0, 0.25);
+}
+
 
 @media (max-width: 1100px) {
     .banner-image img{
